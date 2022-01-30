@@ -1,0 +1,25 @@
+[package]
+name = "dl"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+hyper = { version = "0.14", features = ["full"] }
+tokio = { version = "1", features = ["full"] }
+
+actix = "0.10.0"
+actix-web = "3"
+actix-web-actors = "3.0.0"
+serde = "1.0.117"
+chrono = { version = "0.4", features = ["serde", "rustc-serialize"] }
+
+
+matplotrust = "0.1.7"
+binance = { git = "https://github.com/wisespace-io/binance-rs.git" }
+rsrl = "0.8"
+tensorflow = "0.17.0"
+ta = "0.5.0"
+
+influxdb = { version = "0.5.1", features = ["derive"] }
