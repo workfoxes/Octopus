@@ -3,6 +3,7 @@ use actix_web::{App, HttpServer};
 use crate::core::broker::Broker;
 
 mod core;
+mod entity;
 mod route;
 mod utils;
 
@@ -32,7 +33,6 @@ fn start_bot() {
 
 /// main - start point for besozzi application
 fn main() {
-    let _a = app_server();
-
-    start_bot();
+    println!("Besozzi is starting...");
+    // start_bot();
 }

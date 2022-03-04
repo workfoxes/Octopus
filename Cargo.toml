@@ -10,23 +10,34 @@ readme = "README.md"
 include = ["src/**/*", "tests/**/*", "Cargo.toml", "LICENSE"]
 repository = "https://github.com/workfoxes/besozzi"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-hyper = { version = "0.14", features = ["full"] }
-tokio = { version = "1", features = ["full"] }
-
 actix = "0.10.0"
 actix-web = "3"
 actix-web-actors = "3.0.0"
-serde = "1.0.117"
+hyper = { version = "0.14", features = ["full"] }
+tokio = { version = "1", features = ["full"] }
+serde = { version = "1.0.117", features = ["derive"] }
 chrono = { version = "0.4", features = ["serde", "rustc-serialize"] }
-
 
 matplotrust = "0.1.7"
 binance = { git = "https://github.com/wisespace-io/binance-rs.git" }
 rsrl = "0.8"
 tensorflow = "0.17.0"
 ta = "0.5.0"
-linfa = { version = "0.5.0"}
-linfa-kernel = { version = "0.5.0"}
+linfa = "0.5.0"
+linfa-kernel = "0.5.0"
+migration = { path = "migration" }
+base = { path="base" }
+elder = { path="elder" }
+
+
+[dependencies.sea-orm]
+version = "^0.6.0"
+features = [
+  "macros",
+  "debug-print",
+  "runtime-async-std-native-tls",
+  "sqlx-postgres",
+]
+default-features = false

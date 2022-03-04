@@ -1,8 +1,8 @@
 use ::binance::model::KlineEvent;
 use chrono::{DateTime, Utc};
 
-use crate::core::broker::binance::Binance;
-use crate::core::constant::Brokers;
+use crate::broker::binance::Binance;
+use crate::constant::Brokers;
 
 pub mod binance;
 pub mod constant;

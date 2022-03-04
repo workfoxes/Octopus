@@ -6,7 +6,7 @@ use std::sync::mpsc::{Receiver, Sender};
 use binance::websockets::{WebSockets, WebsocketEvent};
 use chrono::{DateTime, NaiveDateTime, Utc};
 
-use crate::core::broker::{Broker, TradeItem};
+use crate::broker::{Broker, TradeItem};
 
 pub struct Binance {
     sender: Sender<TradeItem>,
