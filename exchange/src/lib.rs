@@ -1,3 +1,10 @@
+
+pub mod binance;
+pub mod coinbase;
+pub mod client;
+pub mod errors;
+pub mod shared;
+
 #[cfg(test)]
 mod tests {
     #[test]

@@ -36,7 +36,7 @@ lazy_static! {
 mod tests {
     #[test]
     fn it_works() {
-        print!("{}", CONFIG.database.url);
+        print!("{}", crate::config::CONFIG.database.url);
         let result = 2 + 2;
         assert_eq!(result, 4);
     }

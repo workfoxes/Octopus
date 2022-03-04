@@ -1,8 +1,5 @@
 use actix_web::{App, HttpServer};
 
-use crate::core::broker::Broker;
-
-mod core;
 mod entity;
 mod route;
 mod utils;
@@ -22,7 +19,7 @@ async fn app_server() -> std::io::Result<()> {
 }
 
 fn start_bot() {
-    let mut broker = core::broker::get(core::constant::Brokers::Binance);
+    let mut broker = elder::broker::get(elder::constant::Brokers::Binance);
     broker.processor(
         vec!["ethbtc", "bnbeth"]
             .into_iter()
