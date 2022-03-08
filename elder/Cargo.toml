@@ -5,7 +5,6 @@ edition = "2021"
 
 [dependencies]
 base = { path = "../base" }
-exchange = { path = "../exchange" }
 serde = { version = "1.0.117", features = ["derive"] }
 chrono = { version = "0.4", features = ["serde", "rustc-serialize"] }
 binance = { git = "https://github.com/wisespace-io/binance-rs.git" }

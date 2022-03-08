@@ -1,3 +1,5 @@
+mod notification;
+
 use config::{Config as CConfig, ConfigError, File};
 use serde::Deserialize;
 use std::env;
@@ -9,11 +11,13 @@ pub struct Database {
     pub url: String,
 }
 
+
 #[derive(Debug, Deserialize)]
 #[allow(unused)]
 pub struct Config {
     debug: bool,
     pub database: Database,
+    pub notification: notification::Notification,
 }
 
 impl Config {

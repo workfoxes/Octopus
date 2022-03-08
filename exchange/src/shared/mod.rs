@@ -1,5 +1,7 @@
 
 pub mod environment;
+pub mod model;
+pub mod traits;
 
 pub type Result<T> = std::result::Result<T, crate::errors::OpenLimitsError>;
 

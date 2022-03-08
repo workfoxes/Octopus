@@ -1,5 +1,4 @@
-use serde::Deserialize;
-use serde::Serialize;
+use serde::{Serialize, Deserialize};
 
 /// This struct represents buy-side and sell-side
 #[derive(Serialize, Deserialize, Clone, Debug, PartialEq, Eq, Hash)]

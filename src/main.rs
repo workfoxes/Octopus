@@ -1,3 +1,6 @@
+#![allow(dead_code)]
+#![allow(unused_variables)]
+
 use actix_web::{App, HttpServer};
 
 mod entity;
@@ -18,15 +21,15 @@ async fn app_server() -> std::io::Result<()> {
     .await
 }
 
-fn start_bot() {
-    let mut broker = elder::broker::get(elder::constant::Brokers::Binance);
-    broker.processor(
-        vec!["ethbtc", "bnbeth"]
-            .into_iter()
-            .map(String::from)
-            .collect(),
-    )
-}
+// fn start_bot() {
+//     let mut broker = elder::broker::get(elder::constant::Brokers::Binance);
+//     broker.processor(
+//         vec!["ethbtc", "bnbeth"]
+//             .into_iter()
+//             .map(String::from)
+//             .collect(),
+//     )
+// }
 
 /// main - start point for besozzi application
 fn main() {
